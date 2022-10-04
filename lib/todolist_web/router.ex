@@ -17,6 +17,9 @@ defmodule TodolistWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/task", TaskController, :get_task
+    get "/task/:id", TaskController, :get_indv_task
+
   end
 
   # Other scopes may use custom stacks.
